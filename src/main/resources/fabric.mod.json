@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "insignis",
+	"version": "${version}",
+	"name": "Insignis",
+	"description": "A mod that makes teamfights more interesting by adding classes",
+	"authors": [
+		"kibble_wibble"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/organization/verdant-mods",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/insignis/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.verdantmods.insignis.Insignis"
+		],
+		"fabric-datagen": [
+			"net.verdantmods.insignis.InsignisDataGenerator"
+		],
+		"client": [
+			"net.verdantmods.insignis.InsignisClient"
+		]
+	},
+	"mixins": [
+		"insignis.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
