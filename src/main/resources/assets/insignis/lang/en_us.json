@@ -3,5 +3,7 @@
   "item.insignis.emblem_of_defense": "Emblem of Defense",
   "item.insignis.emblem_of_support": "Emblem of Support",
 
-  "block.insignis.danger_block": "Danger Block"
+  "block.insignis.danger_block": "Danger Block",
+
+  "itemgroup.insignis.insignis_items": "Insignis"
 }

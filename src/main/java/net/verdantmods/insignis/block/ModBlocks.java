@@ -32,9 +32,8 @@ public class ModBlocks {
 
     public static void registerModBlocks(){
         Insignis.LOGGER.info("Registering Mod Blocks for " + Insignis.MOD_ID);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(DANGER_BLOCK);
-        });
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+//        });
     }
 
 }

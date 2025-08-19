@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    ".o.",
+    ".#.",
+    "..."
+  ],
+  "key": {
+    ".": {
+      "item": "minecraft:iron_nugget"
+    },
+    "#": {
+      "item": "minecraft:lodestone"
+    },
+    "o": {
+      "item": "minecraft:shield"
+    }
+  },
+  "result": {
+    "id": "insignis:emblem_of_defense"
+  }
+}
