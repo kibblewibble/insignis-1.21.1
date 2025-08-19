@@ -1,5 +1,7 @@
 {
   "item.insignis.emblem_of_offense": "Emblem of Offense",
   "item.insignis.emblem_of_defense": "Emblem of Defense",
-  "item.insignis.emblem_of_support": "Emblem of Support"
+  "item.insignis.emblem_of_support": "Emblem of Support",
+
+  "block.insignis.danger_block": "Danger Block"
 }

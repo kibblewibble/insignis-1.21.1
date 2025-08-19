@@ -1,11 +1,11 @@
 package net.verdantmods.insignis;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.verdantmods.insignis.item.ModItems;
+import net.verdantmods.insignis.block.ModBlocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-//test
+
 public class Insignis implements ModInitializer {
 	public static final String MOD_ID = "insignis";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
@@ -13,5 +13,6 @@ public class Insignis implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }

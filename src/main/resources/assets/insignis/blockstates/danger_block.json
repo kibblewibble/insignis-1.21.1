@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "": {
+      "model": "insignis:block/danger_block"
+    }
+  }
+}

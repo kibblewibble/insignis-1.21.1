@@ -23,4 +23,5 @@ public class ModItems {
             entries.add(EMBLEM_OF_OFFENSE);
         });
     }
+
 }
