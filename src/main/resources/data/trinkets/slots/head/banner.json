@@ -1,0 +1,5 @@
+{
+  "icon": "insignis:gui/slots/banner",
+  "order": 2,
+  "validator_predicates": ["trinkets:tag"]
+}

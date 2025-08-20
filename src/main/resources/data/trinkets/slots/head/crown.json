@@ -1,0 +1,5 @@
+{
+  "icon": "insignis:gui/slots/crown",
+  "order": 1,
+  "validator_predicates": ["trinkets:tag"]
+}
