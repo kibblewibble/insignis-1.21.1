@@ -10,6 +10,7 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.verdantmods.insignis.Insignis;
+import net.verdantmods.insignis.item.custom.BannerOfSpeed;
 import net.verdantmods.insignis.item.custom.EmblemOfOffense;
 
 import java.util.List;
@@ -58,6 +59,8 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+
+    public static final Item BANNER_OF_SPEED = registerItem("banner_of_speed", new BannerOfSpeed(new Item.Settings()));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(Insignis.MOD_ID, name), item);

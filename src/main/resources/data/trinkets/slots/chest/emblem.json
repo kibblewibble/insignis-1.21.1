@@ -1,5 +1,8 @@
 {
   "icon": "insignis:gui/slots/emblem",
   "order": 2,
-  "validator_predicates": ["trinkets:tag"]
+  "validator_predicates": [
+    "trinkets:tag",
+    "insignis:emblem"
+  ]
 }
