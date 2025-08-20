@@ -26,6 +26,7 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+
     public static final Item EMBLEM_OF_DEFENSE = registerItem("emblem_of_defense", new Item(new Item.Settings().maxCount(1)){
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

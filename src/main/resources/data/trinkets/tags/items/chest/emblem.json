@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "insignis:emblem_of_offense"
+    "insignis:emblem_of_offense",
+    "insignis:emblem_of_defense"
   ]
 }
