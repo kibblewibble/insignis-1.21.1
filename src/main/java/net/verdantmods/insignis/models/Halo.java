@@ -9,9 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.Identifier;
 import net.verdantmods.insignis.Insignis;
 
-// Made with Blockbench 4.12.6
-// Exported for Minecraft version 1.17+ for Yarn
-// Paste this class into your mod and generate all required imports
+
 public class Halo extends EntityModel<Entity> {
 	public static final EntityModelLayer MODEL_LAYER = new EntityModelLayer(Identifier.of(Insignis.MOD_ID,"halo"), "main");
 	private final ModelPart bb_main;
