@@ -23,7 +23,6 @@ public class ModItems {
             tooltip.add(Text.translatable("tooltip.insignis.emblem_of_offense.line1").formatted(Formatting.BLUE));
             tooltip.add(Text.translatable("tooltip.insignis.emblem_of_offense.line2").formatted(Formatting.RED));
             tooltip.add(Text.translatable("tooltip.insignis.empty"));
-            tooltip.add(Text.translatable("tooltip.insignis.emblem_of_offense.line3").formatted(Formatting.DARK_GRAY,Formatting.ITALIC));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
@@ -35,7 +34,6 @@ public class ModItems {
             tooltip.add(Text.translatable("tooltip.insignis.emblem_of_defense.line1").formatted(Formatting.BLUE));
             tooltip.add(Text.translatable("tooltip.insignis.emblem_of_defense.line2").formatted(Formatting.RED));
             tooltip.add(Text.translatable("tooltip.insignis.empty"));
-            tooltip.add(Text.translatable("tooltip.insignis.emblem_of_defense.line3").formatted(Formatting.DARK_GRAY,Formatting.ITALIC));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
@@ -46,7 +44,6 @@ public class ModItems {
             tooltip.add(Text.translatable("tooltip.insignis.emblem_of_support.line1").formatted(Formatting.BLUE));
             tooltip.add(Text.translatable("tooltip.insignis.emblem_of_support.line2").formatted(Formatting.RED));
             tooltip.add(Text.translatable("tooltip.insignis.empty"));
-            tooltip.add(Text.translatable("tooltip.insignis.emblem_of_support.line3").formatted(Formatting.DARK_GRAY,Formatting.ITALIC));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });

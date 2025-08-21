@@ -13,15 +13,12 @@
 
   "tooltip.insignis.emblem_of_offense.line1": "+1 Attack Damage",
   "tooltip.insignis.emblem_of_offense.line2": "+.5 Damage Taken",
-  "tooltip.insignis.emblem_of_offense.line3": "\"insert quote here\"",
 
   "tooltip.insignis.emblem_of_defense.line1": "-1 Damage Taken",
   "tooltip.insignis.emblem_of_defense.line2": "-.5 Damage Dealt",
-  "tooltip.insignis.emblem_of_defense.line3": "\"insert quote here\"",
 
   "tooltip.insignis.emblem_of_support.line1": "+1 Healing Dealt",
   "tooltip.insignis.emblem_of_support.line2": "-.5 Damage Dealt",
-  "tooltip.insignis.emblem_of_support.line3": "\"insert quote here\"",
 
   "tooltip.insignis.offensive_crown": "Offensive Crown",
   "tooltip.insignis.defensive_crown": "Defensive Crown",
