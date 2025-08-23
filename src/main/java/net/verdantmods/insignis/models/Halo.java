@@ -28,6 +28,5 @@ public class Halo extends EntityModel<Entity> {
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertices, int light, int overlay, int color) {
-		bb_main.render(matrices, vertices, light, overlay);
 	}
 }

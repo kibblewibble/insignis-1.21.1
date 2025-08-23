@@ -34,7 +34,7 @@ public class BannerOfRushing extends TrinketItem {
         var modifiers = super.getModifiers(stack, slot, entity, slotIdentifier);
 
 //        if(this.isWithinRange(BlockPos.))
-        modifiers.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(Insignis.MOD_ID, "emblem_of_offense"), .1, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        modifiers.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(Insignis.MOD_ID, "banner_of_rushing"), .1, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         return modifiers;
     }
 }
