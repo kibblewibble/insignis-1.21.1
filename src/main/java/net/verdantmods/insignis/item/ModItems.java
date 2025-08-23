@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.verdantmods.insignis.Insignis;
 import net.verdantmods.insignis.item.custom.BannerOfRushing;
+import net.verdantmods.insignis.item.custom.CrownOfStealth;
 import net.verdantmods.insignis.item.custom.EmblemOfDefense;
 import net.verdantmods.insignis.item.custom.EmblemOfOffense;
 
@@ -17,6 +18,7 @@ public class ModItems {
     public static final Item EMBLEM_OF_SUPPORT = registerItem("emblem_of_support", new Item(new Item.Settings().maxCount(1)));
 
     public static final Item CROWN_OF_DUELING = registerItem("crown_of_dueling", new Item(new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item CROWN_OF_STEALTH = registerItem("crown_of_stealth", new CrownOfStealth(new Item.Settings().maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item BANNER_OF_RUSHING = registerItem("banner_of_rushing", new BannerOfRushing(new Item.Settings()));
 

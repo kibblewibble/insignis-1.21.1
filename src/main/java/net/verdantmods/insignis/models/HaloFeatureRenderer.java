@@ -26,7 +26,7 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
         super(context);
         halo = loader.getModelPart(Halo.MODEL_LAYER);
     }
-//gulp...
+
     @Override
     public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, AbstractClientPlayerEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(headYaw));

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.verdantmods.insignis.item.ModItemGroups;
 import net.verdantmods.insignis.item.ModItems;
 import net.verdantmods.insignis.block.ModBlocks;
+import net.verdantmods.insignis.packet.ModPackets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,5 +17,6 @@ public class Insignis implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+        ModPackets.init();
 	}
 }

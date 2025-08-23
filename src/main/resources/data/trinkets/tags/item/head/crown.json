@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "insignis:crown_of_dueling"
+    "insignis:crown_of_dueling",
+    "insignis:crown_of_stealth"
   ]
 }
