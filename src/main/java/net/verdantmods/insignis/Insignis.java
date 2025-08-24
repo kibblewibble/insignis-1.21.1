@@ -1,6 +1,7 @@
 package net.verdantmods.insignis;
 
 import net.fabricmc.api.ModInitializer;
+import net.verdantmods.insignis.effect.ModEffects;
 import net.verdantmods.insignis.item.ModItemGroups;
 import net.verdantmods.insignis.item.ModItems;
 import net.verdantmods.insignis.block.ModBlocks;
@@ -18,5 +19,6 @@ public class Insignis implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
         ModPackets.init();
+        ModEffects.registerModEffects();
 	}
 }
