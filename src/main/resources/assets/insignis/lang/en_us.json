@@ -12,7 +12,7 @@
   "itemgroup.insignis.insignis_items": "Insignis",
 
 
-
+  "effect.insignis.armor_invisibility": "Armor Invisibility",
 
 
   "trinkets.slot.chest.emblem": "Emblem",
@@ -33,5 +33,7 @@
 
   "tooltip.insignis.offensive_crown": "Offensive Crown",
   "tooltip.insignis.defensive_crown": "Defensive Crown",
-  "tooltip.insignis.supportive_crown": "Supportive Crown"
+  "tooltip.insignis.supportive_crown": "Supportive Crown",
+
+  "tooltip.insignis.active_ability": "Press %s to trigger this ability:"
 }

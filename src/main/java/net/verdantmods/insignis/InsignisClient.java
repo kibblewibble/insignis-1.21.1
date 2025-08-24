@@ -18,7 +18,7 @@ import net.verdantmods.insignis.packet.ActiveAbilityKeybind;
 import org.lwjgl.glfw.GLFW;
 
 public class InsignisClient implements ClientModInitializer {
-    private KeyBinding keyBinding;
+    public static KeyBinding activeAbilityKeybind;
     @Override
     public void onInitializeClient() {
         EntityModelLayerRegistry.registerModelLayer(Halo.MODEL_LAYER, Halo::getTexturedModelData);
@@ -27,14 +27,14 @@ public class InsignisClient implements ClientModInitializer {
                 registrationHelper.register(new HaloFeatureRenderer((FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>>) entityRenderer, context.getModelLoader()));
             }
         }));
-        keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+        activeAbilityKeybind = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.insignis.active_ability", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
                 GLFW.GLFW_KEY_X, // The keycode of the key
                 "category.insignis" // The translation key of the keybinding's category.
         ));
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (keyBinding.wasPressed()) {
+            while (activeAbilityKeybind.wasPressed()) {
                 ClientPlayNetworking.send(ActiveAbilityKeybind.INSTANCE);
             }
         });
