@@ -11,7 +11,7 @@ public class CrownOfStealth extends AbstractCrown{
     }
 
     @Override
-    public void ability(PlayerEntity player, ItemStack stack) {
+    public void activeAbility(PlayerEntity player, ItemStack stack) {
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 100, 0, false, false));
     }
 }

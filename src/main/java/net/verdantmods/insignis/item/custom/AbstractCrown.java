@@ -8,5 +8,5 @@ public abstract class AbstractCrown extends TrinketItem {
     public AbstractCrown(Settings settings) {
         super(settings);
     }
-    public abstract void ability(PlayerEntity player, ItemStack stack);
+    public abstract void activeAbility(PlayerEntity player, ItemStack stack);
 }

@@ -20,7 +20,7 @@ public class ActiveAbilityKeybind implements ModPackets.ReceiverPacket<ServerPla
     public void receive(ServerPlayNetworking.Context context) {
         context.player().getComponent(TrinketsApi.TRINKET_COMPONENT).getEquipped(stack -> stack.getItem() instanceof AbstractCrown).forEach(slotReferenceItemStackPair -> {
             ItemStack stack = slotReferenceItemStackPair.getRight();
-            ((AbstractCrown)stack.getItem()).ability(context.player(), stack);
+            ((AbstractCrown)stack.getItem()).activeAbility(context.player(), stack);
         });
     }
 

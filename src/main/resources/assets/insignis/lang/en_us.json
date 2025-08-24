@@ -2,12 +2,20 @@
   "item.insignis.emblem_of_offense": "Emblem of Offense",
   "item.insignis.emblem_of_defense": "Emblem of Defense",
   "item.insignis.emblem_of_support": "Emblem of Support",
+  "item.insignis.banner_of_rushing": "Banner of Rushing",
+  "item.insignis.crown_of_stealth": "Crown of Stealth",
+
 
   "block.insignis.danger_block": "Danger Block",
 
+
   "itemgroup.insignis.insignis_items": "Insignis",
 
+
   "trinkets.slot.chest.emblem": "Emblem",
+  "trinkets.slot.head.crown": "Crown",
+  "trinkets.slot.head.banner": "Banner",
+
 
   "tooltip.insignis.empty": "",
 
