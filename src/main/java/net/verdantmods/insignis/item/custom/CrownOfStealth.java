@@ -20,9 +20,9 @@ public class CrownOfStealth extends AbstractCrown{
 
     @Override
     public void activeAbility(PlayerEntity player, ItemStack stack) {
-        int duration = 30*20;
+        int duration = 20*20;
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, duration, 0, false, false, true));
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, duration, 0, false, false, false));
+        player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, duration, 2, false, false, false));
         player.addStatusEffect(new StatusEffectInstance(ModEffects.ARMOR_INVISIBILITY, duration, 0, false, false, false));
     }
 
