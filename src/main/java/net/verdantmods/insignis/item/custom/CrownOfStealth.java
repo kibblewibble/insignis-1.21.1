@@ -1,6 +1,5 @@
 package net.verdantmods.insignis.item.custom;
 
-import com.mojang.brigadier.Message;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
