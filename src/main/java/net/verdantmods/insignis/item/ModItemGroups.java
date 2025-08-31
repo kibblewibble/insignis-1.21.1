@@ -21,6 +21,11 @@ public class ModItemGroups {
                         entries.add(ModItems.EMBLEM_OF_DEFENSE);
                         entries.add(ModItems.EMBLEM_OF_SUPPORT);
 
+                        entries.add(ModItems.CROWN_OF_DUELING);
+                        entries.add(ModItems.CROWN_OF_STEALTH);
+
+                        entries.add(ModItems.BANNER_OF_RUSHING);
+
                         entries.add(ModBlocks.DANGER_BLOCK);
                     })
                     .build());
