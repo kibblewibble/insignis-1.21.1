@@ -36,18 +36,20 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
             return;
         }
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(headYaw));
-        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-35));
+        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-25));
         getContextModel().body.copyTransform(halo);
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(getTexture(entity)));
         int m = LivingEntityRenderer.getOverlay(entity, 0.0F);
         matrices.translate(0, entity.isSneaky() ? -.45F : -.75F, -.25);
-        matrices.scale(1F, 0F, 1F);
-        int color = ColorHelper.Argb.getArgb(255,255,255,255);
+        matrices.scale(-1F, -0.001F, 1F);
+        int color = ColorHelper.Argb.getArgb(255,0,0,255);
+        halo.render(matrices, vertexConsumer, light, m, color);
+        matrices.scale(-1F, 0.001F, 1F);
         halo.render(matrices, vertexConsumer, light, m, color);
     }
 
     @Override
     protected Identifier getTexture(AbstractClientPlayerEntity entity){
-        return Identifier.of(Insignis.MOD_ID, "textures/entity/halo_of_offense.png");
+        return Identifier.of(Insignis.MOD_ID, "textures/entity/halo.png");
     }
 }
