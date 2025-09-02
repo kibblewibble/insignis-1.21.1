@@ -48,6 +48,6 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
 
     @Override
     protected Identifier getTexture(AbstractClientPlayerEntity entity){
-        return Identifier.of(Insignis.MOD_ID, "textures/entity/halo.png");
+        return Identifier.of(Insignis.MOD_ID, "textures/entity/halo_of_offense.png");
     }
 }
