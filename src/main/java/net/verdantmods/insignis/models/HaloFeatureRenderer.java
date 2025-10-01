@@ -36,7 +36,7 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
             return;
         }
 
-        float time = (entity.getWorld().getTime() + tickDelta) * 1.5F;
+        float time = (entity.getWorld().getTime() + tickDelta) * .25F;
 
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(headYaw));
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-25));
