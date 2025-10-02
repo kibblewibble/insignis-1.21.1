@@ -1,5 +1,6 @@
 package net.verdantmods.insignis.models;
 
+import dev.emi.trinkets.api.TrinketsApi;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.RenderLayer;
@@ -18,8 +19,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.RotationAxis;
 import net.verdantmods.insignis.Insignis;
+import net.verdantmods.insignis.item.ModItems;
 
-import static net.verdantmods.insignis.entity.equipment.HasEquipped.isWearingInSlot;
+import static net.verdantmods.insignis.entity.equipment.HasEquipped.isWearingTrinket;
 
 
 public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
@@ -64,7 +66,8 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
 
     @Override
     protected Identifier getTexture(AbstractClientPlayerEntity entity){
-        if(isWearingInSlot(entity, EquipmentSlot.HEAD, Items.DIAMOND_HELMET)) {
+        //Its not rly coded the way i would do it but it should work and its close to your original code
+        if(isWearingTrinket(entity, ModItems.CROWN_OF_DUELING)) {
             return Identifier.of(Insignis.MOD_ID, "textures/entity/halo.png");
         }
         else return Identifier.of(Insignis.MOD_ID, "textures/item/banner_of_rushing.png");
