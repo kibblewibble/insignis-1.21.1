@@ -11,13 +11,15 @@ import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.render.entity.model.EntityModelLoader;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.RotationAxis;
 import net.verdantmods.insignis.Insignis;
 
-import java.awt.*;
+import static net.verdantmods.insignis.entity.equipment.HasEquipped.isWearingInSlot;
 
 
 public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
@@ -46,11 +48,9 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
         matrices.translate(0, entity.isSneaky() ? -.45F : -.75F, -.25);
         int color = ColorHelper.Argb.getArgb(255,100,255,200);
 
-        // Save the current transformation state
         matrices.push();
 
-        // Move to the center of where the halo will be, rotate, then move back
-        matrices.translate(0, 0, 0.25); // Adjust these values based on your halo model's center
+        matrices.translate(0, 0, 0.25);
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(time));
         matrices.translate(0, 0, -0.25);
 
@@ -59,12 +59,14 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
         matrices.scale(-1F, 0.001F, 1F);
         halo.render(matrices, vertexConsumer, light, m, color);
 
-        // Restore the transformation state
         matrices.pop();
     }
 
     @Override
     protected Identifier getTexture(AbstractClientPlayerEntity entity){
-        return Identifier.of(Insignis.MOD_ID, "textures/entity/halo.png");
+        if(isWearingInSlot(entity, EquipmentSlot.HEAD, Items.DIAMOND_HELMET)) {
+            return Identifier.of(Insignis.MOD_ID, "textures/entity/halo.png");
+        }
+        else return Identifier.of(Insignis.MOD_ID, "textures/item/banner_of_rushing.png");
     }
 }
