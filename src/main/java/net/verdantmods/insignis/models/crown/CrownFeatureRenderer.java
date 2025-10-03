@@ -13,7 +13,7 @@ import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.util.math.RotationAxis;
-import net.verdantmods.insignis.models.HaloProvider;
+import net.verdantmods.insignis.item.HaloProvider;
 import net.verdantmods.insignis.models.halo.Halo;
 
 
@@ -40,7 +40,7 @@ public class CrownFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEn
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(HaloProvider.getCrown(entity)));
         int m = LivingEntityRenderer.getOverlay(entity, 0.0F);
         matrices.translate(0, entity.isSneaky() ? -.45F : -.75F, -.25);
-        int color = HaloProvider.getColor(entity);
+        int color = HaloProvider.getHaloColor(entity);
 
         matrices.scale(-1F, -0.001F, 1F);
         halo.render(matrices, vertexConsumer, light, m, color);

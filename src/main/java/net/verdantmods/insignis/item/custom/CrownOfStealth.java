@@ -1,5 +1,6 @@
 package net.verdantmods.insignis.item.custom;
 
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -11,10 +12,11 @@ import net.minecraft.util.Identifier;
 import net.verdantmods.insignis.Insignis;
 import net.verdantmods.insignis.InsignisClient;
 import net.verdantmods.insignis.effect.ModEffects;
+import net.verdantmods.insignis.item.HaloProvider;
 
 import java.util.List;
 
-public class CrownOfStealth extends AbstractCrown{
+public class CrownOfStealth extends AbstractCrown implements HaloProvider {
     public CrownOfStealth(Settings settings) {
         super(settings);
     }
@@ -33,7 +35,7 @@ public class CrownOfStealth extends AbstractCrown{
         tooltip.add(Text.translatable("tooltip.insignis.active_ability", text).formatted(Formatting.GRAY));
     }
 
-    public static Identifier getCrown(){
+    public Identifier getCrownTexture(AbstractClientPlayerEntity entity){
         return Identifier.of(Insignis.MOD_ID, "textures/entity/crown/crown_of_stealth.png");
     }
 }
