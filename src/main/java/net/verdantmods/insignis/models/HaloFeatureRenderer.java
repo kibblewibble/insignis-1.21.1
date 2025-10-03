@@ -1,6 +1,5 @@
 package net.verdantmods.insignis.models;
 
-import dev.emi.trinkets.api.TrinketsApi;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.RenderLayer;
@@ -12,14 +11,14 @@ import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.render.entity.model.EntityModelLoader;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.RotationAxis;
 import net.verdantmods.insignis.Insignis;
 import net.verdantmods.insignis.item.ModItems;
+import net.verdantmods.insignis.item.custom.EmblemOfOffense;
+import net.verdantmods.insignis.item.custom.EmblemOfSupport;
 
 import static net.verdantmods.insignis.entity.equipment.HasEquipped.isWearingTrinket;
 
@@ -48,7 +47,7 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(getTexture(entity)));
         int m = LivingEntityRenderer.getOverlay(entity, 0.0F);
         matrices.translate(0, entity.isSneaky() ? -.45F : -.75F, -.25);
-        int color = ColorHelper.Argb.getArgb(255,100,255,200);
+        int color = ColorHelper.Argb.getArgb(255,255,255,200);
 
         matrices.push();
 
@@ -66,10 +65,12 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
 
     @Override
     protected Identifier getTexture(AbstractClientPlayerEntity entity){
-        //Its not rly coded the way i would do it but it should work and its close to your original code
-        if(isWearingTrinket(entity, ModItems.CROWN_OF_DUELING)) {
-            return Identifier.of(Insignis.MOD_ID, "textures/entity/halo.png");
+        if(isWearingTrinket(entity, ModItems.EMBLEM_OF_OFFENSE)) {
+            return EmblemOfOffense.getHalo();
         }
-        else return Identifier.of(Insignis.MOD_ID, "textures/item/banner_of_rushing.png");
+        if(isWearingTrinket(entity, ModItems.EMBLEM_OF_SUPPORT)) {
+            return EmblemOfSupport.getHalo();
+        }
+        else return Identifier.of(Insignis.MOD_ID, "textures/entity/halo/no_halo.png");
     }
 }

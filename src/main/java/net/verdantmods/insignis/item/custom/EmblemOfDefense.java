@@ -18,9 +18,14 @@ public class EmblemOfDefense extends TrinketItem {
     }
 
     public Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, Identifier slotIdentifier) {
+
         var modifiers = super.getModifiers(stack, slot, entity, slotIdentifier);
         modifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(Identifier.of(Insignis.MOD_ID, "emblem_of_offense"), 1.5, EntityAttributeModifier.Operation.ADD_VALUE));
         modifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(Identifier.of(Insignis.MOD_ID, "emblem_of_offense"), -.5, EntityAttributeModifier.Operation.ADD_VALUE));
         return modifiers;
+    }
+
+    public static Identifier getHalo(){
+       return Identifier.of(Insignis.MOD_ID, "textures/entity/halo/halo_of_defense.png");
     }
 }

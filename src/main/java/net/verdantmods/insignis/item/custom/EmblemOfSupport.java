@@ -14,13 +14,19 @@ import net.minecraft.util.Identifier;
 import net.verdantmods.insignis.Insignis;
 
 public class EmblemOfSupport extends TrinketItem {
+    public EmblemOfSupport(Item.Settings settings) {
+        super(settings);
+    }
+
     public Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, Identifier slotIdentifier) {
 
         var modifiers = super.getModifiers(stack, slot, entity, slotIdentifier);
                 modifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(Identifier.of(Insignis.MOD_ID, "emblem_of_support"), -.5, EntityAttributeModifier.Operation.ADD_VALUE));
         return modifiers;
     }
-    public EmblemOfSupport(Item.Settings settings) {
-        super(settings);
+
+
+    public static Identifier getHalo(){
+        return Identifier.of(Insignis.MOD_ID, "textures/entity/halo/halo_of_support.png");
     }
 }
