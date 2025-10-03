@@ -3,23 +3,21 @@ package net.verdantmods.insignis.item.custom;
 import com.google.common.collect.Multimap;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketItem;
-import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ColorHelper;
 import net.verdantmods.insignis.Insignis;
-
-import javax.swing.text.html.parser.Entity;
 
 public class BannerOfRushing extends TrinketItem {
 
-
+    public BannerOfRushing(Settings settings) {
+        super(settings);
+    }
 
 //    private boolean isWithinRange(BlockPos center, BlockPos target, int range) {
 //        if (Math.abs(center.getX() - target.getX()) <= range &&
@@ -36,7 +34,7 @@ public class BannerOfRushing extends TrinketItem {
         return modifiers;
     }
 
-    public BannerOfRushing(Settings settings) {
-        super(settings);
+    public static int getColor(){
+        return ColorHelper.Argb.getArgb(255, 100, 200, 200);
     }
 }

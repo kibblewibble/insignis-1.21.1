@@ -7,6 +7,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
+import net.verdantmods.insignis.Insignis;
 import net.verdantmods.insignis.InsignisClient;
 import net.verdantmods.insignis.effect.ModEffects;
 
@@ -29,5 +31,9 @@ public class CrownOfStealth extends AbstractCrown{
     public void appendTooltip(ItemStack item, TooltipContext context, List<Text> tooltip, TooltipType options){
         Text text = InsignisClient.activeAbilityKeybind.getBoundKeyLocalizedText();
         tooltip.add(Text.translatable("tooltip.insignis.active_ability", text).formatted(Formatting.GRAY));
+    }
+
+    public static Identifier getCrown(){
+        return Identifier.of(Insignis.MOD_ID, "textures/entity/crown/crown_of_stealth.png");
     }
 }

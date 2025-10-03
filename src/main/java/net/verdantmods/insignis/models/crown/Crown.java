@@ -1,4 +1,4 @@
-package net.verdantmods.insignis.models;
+package net.verdantmods.insignis.models.crown;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -10,18 +10,25 @@ import net.minecraft.util.Identifier;
 import net.verdantmods.insignis.Insignis;
 
 
-public class Halo extends EntityModel<Entity> {
+public class Crown extends EntityModel<Entity> {
 	public static final EntityModelLayer MODEL_LAYER = new EntityModelLayer(Identifier.of(Insignis.MOD_ID,"halo"), "main");
 	private final ModelPart bb_main;
-	public Halo(ModelPart root) {
+	public Crown(ModelPart root) {
 		this.bb_main = root.getChild("bb_main");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		ModelPartData bb_main = modelPartData.addChild("bb_main", ModelPartBuilder.create().uv(0, 0).cuboid(-16.0F, 0.0F, -16.0F, 32.0F, 0.0F, 32.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 4.0F));
-		return TexturedModelData.of(modelData, 32, 32);
+		ModelPartData bb_main = modelPartData.addChild("bb_main", ModelPartBuilder.create().uv(0, 0).cuboid(-4.0F, 0.0F, -4.0F, 8.0F, 0.0F, 8.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 28.0F, 4.667F));
+		return TexturedModelData.of(modelData, 8, 8);
 	}
+
+
+
+
+
+
+
 
 	@Override
 	public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

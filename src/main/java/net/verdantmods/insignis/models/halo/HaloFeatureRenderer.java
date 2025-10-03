@@ -1,4 +1,4 @@
-package net.verdantmods.insignis.models;
+package net.verdantmods.insignis.models.halo;
 
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -12,15 +12,8 @@ import net.minecraft.client.render.entity.model.EntityModelLoader;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.RotationAxis;
-import net.verdantmods.insignis.Insignis;
-import net.verdantmods.insignis.item.ModItems;
-import net.verdantmods.insignis.item.custom.EmblemOfOffense;
-import net.verdantmods.insignis.item.custom.EmblemOfSupport;
-
-import static net.verdantmods.insignis.entity.equipment.HasEquipped.isWearingTrinket;
+import net.verdantmods.insignis.models.HaloProvider;
 
 
 public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
@@ -44,10 +37,10 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(headYaw));
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-25));
         getContextModel().body.copyTransform(halo);
-        VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(getTexture(entity)));
+        VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(HaloProvider.getHalo(entity)));
         int m = LivingEntityRenderer.getOverlay(entity, 0.0F);
         matrices.translate(0, entity.isSneaky() ? -.45F : -.75F, -.25);
-        int color = ColorHelper.Argb.getArgb(255,255,255,200);
+        int color = HaloProvider.getColor(entity);
 
         matrices.push();
 
@@ -63,14 +56,5 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
         matrices.pop();
     }
 
-    @Override
-    protected Identifier getTexture(AbstractClientPlayerEntity entity){
-        if(isWearingTrinket(entity, ModItems.EMBLEM_OF_OFFENSE)) {
-            return EmblemOfOffense.getHalo();
-        }
-        if(isWearingTrinket(entity, ModItems.EMBLEM_OF_SUPPORT)) {
-            return EmblemOfSupport.getHalo();
-        }
-        else return Identifier.of(Insignis.MOD_ID, "textures/entity/halo/no_halo.png");
-    }
+
 }

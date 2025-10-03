@@ -12,8 +12,8 @@ import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.EntityType;
-import net.verdantmods.insignis.models.Halo;
-import net.verdantmods.insignis.models.HaloFeatureRenderer;
+import net.verdantmods.insignis.models.halo.Halo;
+import net.verdantmods.insignis.models.halo.HaloFeatureRenderer;
 import net.verdantmods.insignis.packet.ActiveAbilityKeybind;
 import org.lwjgl.glfw.GLFW;
 
@@ -27,6 +27,7 @@ public class InsignisClient implements ClientModInitializer {
                 registrationHelper.register(new HaloFeatureRenderer((FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>>) entityRenderer, context.getModelLoader()));
             }
         }));
+
         activeAbilityKeybind = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.insignis.active_ability", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
