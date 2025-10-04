@@ -13,7 +13,7 @@ import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.util.math.RotationAxis;
-import net.verdantmods.insignis.models.HaloProvider;
+import net.verdantmods.insignis.item.HaloProvider;
 
 
 public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
@@ -40,7 +40,7 @@ public class HaloFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEnt
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(HaloProvider.getHalo(entity)));
         int m = LivingEntityRenderer.getOverlay(entity, 0.0F);
         matrices.translate(0, entity.isSneaky() ? -.45F : -.75F, -.25);
-        int color = HaloProvider.getColor(entity);
+        int color = HaloProvider.getHaloColor(entity);
 
         matrices.push();
 

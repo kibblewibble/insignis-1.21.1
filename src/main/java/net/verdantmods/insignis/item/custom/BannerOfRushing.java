@@ -3,6 +3,7 @@ package net.verdantmods.insignis.item.custom;
 import com.google.common.collect.Multimap;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketItem;
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -12,8 +13,9 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
 import net.verdantmods.insignis.Insignis;
-
-public class BannerOfRushing extends TrinketItem {
+import net.verdantmods.insignis.item.HaloProvider;
+//Implemented to have a color
+public class BannerOfRushing extends TrinketItem implements HaloProvider {
 
     public BannerOfRushing(Settings settings) {
         super(settings);
@@ -34,7 +36,8 @@ public class BannerOfRushing extends TrinketItem {
         return modifiers;
     }
 
-    public static int getColor(){
+    //Overriden to have a color
+    public Integer getColor(AbstractClientPlayerEntity entity) {
         return ColorHelper.Argb.getArgb(255, 100, 200, 200);
     }
 }
