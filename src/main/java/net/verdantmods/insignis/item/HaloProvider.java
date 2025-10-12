@@ -21,6 +21,7 @@ public interface HaloProvider {
     default Integer getColor(AbstractClientPlayerEntity entity){
         return null;
     }
+
     //Call this to get the Halo texture from all the player's trinkets
     static Identifier getHalo(AbstractClientPlayerEntity entity){
         return entity.getComponent(TrinketsApi.TRINKET_COMPONENT)
@@ -49,7 +50,7 @@ public interface HaloProvider {
                 .getEquipped(stack -> stack.getItem() instanceof HaloProvider)
                 .stream()
                 .map(slotReferenceItemStackPair -> ((HaloProvider) slotReferenceItemStackPair.getRight().getItem()).getColor(entity))
-                .filter(identifier -> identifier != null)
+                .filter(Objects::nonNull)
                 .findFirst().orElse(ColorHelper.Argb.getArgb(255, 255,255,255));
     }
 }

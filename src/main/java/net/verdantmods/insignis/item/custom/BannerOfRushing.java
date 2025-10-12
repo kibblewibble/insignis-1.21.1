@@ -36,7 +36,7 @@ public class BannerOfRushing extends TrinketItem implements HaloProvider {
         return modifiers;
     }
 
-    //Overriden to have a color
+    //Overridden to have a color
     public Integer getColor(AbstractClientPlayerEntity entity) {
         return ColorHelper.Argb.getArgb(255, 100, 200, 200);
     }

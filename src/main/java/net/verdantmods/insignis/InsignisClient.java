@@ -12,6 +12,8 @@ import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.EntityType;
+import net.verdantmods.insignis.models.crown.Crown;
+import net.verdantmods.insignis.models.crown.CrownFeatureRenderer;
 import net.verdantmods.insignis.models.halo.Halo;
 import net.verdantmods.insignis.models.halo.HaloFeatureRenderer;
 import net.verdantmods.insignis.packet.ActiveAbilityKeybind;
@@ -25,6 +27,7 @@ public class InsignisClient implements ClientModInitializer {
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register(((entityType, entityRenderer, registrationHelper, context) -> {
             if (entityType.equals(EntityType.PLAYER)) {
                 registrationHelper.register(new HaloFeatureRenderer((FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>>) entityRenderer, context.getModelLoader()));
+                registrationHelper.register(new CrownFeatureRenderer((FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>>) entityRenderer, context.getModelLoader()));
             }
         }));
 

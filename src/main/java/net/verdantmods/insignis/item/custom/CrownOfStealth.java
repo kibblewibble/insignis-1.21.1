@@ -36,6 +36,6 @@ public class CrownOfStealth extends AbstractCrown implements HaloProvider {
     }
 
     public Identifier getCrownTexture(AbstractClientPlayerEntity entity){
-        return Identifier.of(Insignis.MOD_ID, "textures/entity/crown/crown_of_stealth.png");
+        return Identifier.of(Insignis.MOD_ID, "textures/entity/crown/support/crown_of_stealth.png");
     }
 }
