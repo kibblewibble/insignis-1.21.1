@@ -21,13 +21,6 @@ public class BannerOfRushing extends TrinketItem implements HaloProvider {
         super(settings);
     }
 
-//    private boolean isWithinRange(BlockPos center, BlockPos target, int range) {
-//        if (Math.abs(center.getX() - target.getX()) <= range &&
-//                Math.abs(center.getY() - target.getY()) <= range &&
-//                Math.abs(center.getZ() - target.getZ()) <= range) {
-//            return true;
-//        } else {return false;}
-//    }
     public Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, Identifier slotIdentifier) {
         var modifiers = super.getModifiers(stack, slot, entity, slotIdentifier);
 
